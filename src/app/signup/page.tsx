@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 
 const SignupPage = () => {
@@ -11,11 +11,12 @@ const SignupPage = () => {
   });
 
   const router = useRouter();
+  const routerRef = useRef(router); 
 
   useEffect(() => {
     const existingUser = localStorage.getItem("user");
     if (existingUser) {
-      router.push("/login"); // اگر user پہلے سے Signup کر چکا ہے تو اسے Login پر بھیجیں
+        routerRef.current.push("/login"); 
     }
   }, []);
 
@@ -25,9 +26,9 @@ const SignupPage = () => {
 
   const handleSignup = (e: React.FormEvent) => {
     e.preventDefault();
-    localStorage.setItem("user", JSON.stringify(user)); // User کو Local Storage میں Save کریں
+    localStorage.setItem("user", JSON.stringify(user));
     alert("Signup Successful! Please Login.");
-    router.push("/login"); // Signup کے بعد Login Page پر بھیجیں
+    router.push("/login"); 
   };
 
   return (

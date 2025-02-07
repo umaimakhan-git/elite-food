@@ -11,7 +11,8 @@ const Footer1 = () => {
           <h2 className="text-2xl font-bold">
             <span className="text-yellow-500">Still Need Our Support</span>
           </h2>
-          <p className="text-sm mt-2">Don’t wait, make a smart & logical quote here. It's pretty easy.</p>
+          <p className="text-sm mt-2">Don&apos;t wait, make a smart &amp; logical quote here. It&apos;s pretty easy.</p>
+
         </div>
         <div className="flex w-full md:w-auto items-center space-x-2">
              <input 
