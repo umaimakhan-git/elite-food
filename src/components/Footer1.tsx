@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 
 
 const Footer1 = () => {
@@ -33,10 +34,10 @@ const Footer1 = () => {
         <div>
           <h2 className="text-xl font-semibold">Useful Links</h2>
           <ul className="mt-3 space-y-2">
-            <li><a href="#" className="hover:underline">About</a></li>
-            <li><a href="#" className="hover:underline">News</a></li>
-            <li><a href="#" className="hover:underline">Partner</a></li>
-            <li><a href="#" className="hover:underline">Contact</a></li>
+            <li><Link href="#" className="hover:underline">About</Link></li>
+            <li><Link href="#" className="hover:underline">News</Link></li>
+            <li><Link href="#" className="hover:underline">Partner</Link></li>
+            <li><Link href="#" className="hover:underline">Contact</Link></li>
           </ul>
         </div>
         <div>

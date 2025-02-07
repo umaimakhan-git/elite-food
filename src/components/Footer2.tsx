@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { PiClockClockwiseBold } from "react-icons/pi";
+import Link from "next/link";
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaPinterest } from "react-icons/fa";
 
 const Footer = () => {
@@ -14,11 +14,11 @@ const Footer = () => {
         
      
         <div className="flex space-x-4">
-          <a href="#" className="hover:text-gray-400 transition"><FaFacebookF size={20} /></a>
-          <a href="#" className="hover:text-gray-400 transition"><FaTwitter size={20} /></a>
-          <a href="#" className="hover:text-gray-400 transition"><FaInstagram size={20} /></a>
-          <a href="#" className="hover:text-gray-400 transition"><FaYoutube size={20} /></a>
-          <a href="#" className="hover:text-gray-400 transition"><FaPinterest size={20} /></a>
+          <Link href="#" className="hover:text-gray-400 transition"><FaFacebookF size={20} /></Link>
+          <Link href="#" className="hover:text-gray-400 transition"><FaTwitter size={20} /></Link>
+          <Link href="#" className="hover:text-gray-400 transition"><FaInstagram size={20} /></Link>
+          <Link href="#" className="hover:text-gray-400 transition"><FaYoutube size={20} /></Link>
+          <Link href="#" className="hover:text-gray-400 transition"><FaPinterest size={20} /></Link>
         </div>
       </div>
     </footer>
