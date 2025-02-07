@@ -1,6 +1,6 @@
-import { title } from "process";
 
-export default {
+
+const foodSchema = {
   name: 'food', 
   type: 'document',
   title: 'Food',
@@ -16,7 +16,7 @@ export default {
       type: 'slug',
       options: {
         source: 'name',
-        maxLength: 200, // will be ignored if slugify is set
+        maxLength: 200, 
         slugify: (input: string) => input
                              .toLowerCase()
                              .replace(/\s+/g, '-')
@@ -78,3 +78,5 @@ export default {
     }
   ],
 };
+
+export default foodSchema;

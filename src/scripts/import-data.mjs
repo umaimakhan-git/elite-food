@@ -45,7 +45,7 @@ async function importData() {
       axios.get("https://sanity-nextjs-rouge.vercel.app/api/foods")
     );
 
-    const [foodsResponse, chefsResponse] = await Promise.all($Promise);
+    const [foodsResponse] = await Promise.all($Promise);
     const foods = foodsResponse.data;
       for (const food of foods) {
         console.log(`Processing food: ${food.name}`);
