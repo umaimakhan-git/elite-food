@@ -1,4 +1,4 @@
-import { createClient } from "next-sanity";
+import { createClient } from "@sanity/client"; // ✅ Correct Import
 
 const client = createClient({
     projectId: "your-project-id",
@@ -7,6 +7,9 @@ const client = createClient({
     useCdn: false,
 });
 
-export async function sanityFetch({query, params ={}}: {query: string; params?: any}) {
+export async function sanityFetch({ 
+    query, 
+    params = {} 
+}: { query: string; params?: Record<string, any> }) {
     return await client.fetch(query, params);
 }
