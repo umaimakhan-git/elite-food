@@ -27,7 +27,7 @@ const AboutUs = () => {
         <div className="bg-gray-900 p-6 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:scale-105">
           <FaHeart className="text-5xl text-orange-500 mx-auto mb-4" />
           <h3 className="text-xl font-semibold text-orange-400 mb-2">Customer Love</h3>
-          <p className="text-gray-300">Your satisfaction is our priority – we strive to make every meal special for you.</p>
+          <p className="text-gray-300">Your satisfaction is our priority  we strive to make every meal special for you.</p>
         </div>
       </div>
     </div>

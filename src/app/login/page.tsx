@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import bcrypt from "bcryptjs"; 
@@ -70,7 +71,7 @@ const LoginPage = () => {
           </button>
         </form>
         <p className="text-center text-sm text-gray-500 mt-3">
-          Don't have an account? <a href="/signup" className="text-orange-500 font-semibold">Sign up</a>
+          Do not have an account? <Link href="/signup" className="text-orange-500 font-semibold">Sign up</Link>
         </p>
       </div>
     </div>

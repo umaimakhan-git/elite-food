@@ -3,7 +3,8 @@
 import React, { useState, useEffect } from "react";
 import { FaPlus, FaMinus, FaTrash } from "react-icons/fa";
 import Link from "next/link";
-import router from "next/router";
+import Image from "next/image";
+
 
 
 interface CartItem {
@@ -33,7 +34,7 @@ const CartPage = () => {
 
   
   const increaseQuantity = (id: string) => {
-    const updatedCart = cart.map((item, index) =>
+    const updatedCart = cart.map(item =>
       item._id === id ? { ...item, quantity: item.quantity + 1 } : item
     );
     setCart(updatedCart);
@@ -73,7 +74,7 @@ const CartPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {cart.map(item => (
               <div key={item._id} className="p-4 border rounded-lg shadow-md flex flex-col items-center">
-                <img src={item.imageUrl} alt={item.name} className="w-32 h-32 object-cover rounded-md mb-2" />
+                <Image src={item.imageUrl} alt={item.name} className="w-32 h-32 object-cover rounded-md mb-2" />
                 <h3 className="text-lg font-semibold">{item.name}</h3>
                 <p className="text-md font-semibold">${item.price}</p>
 
