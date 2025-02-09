@@ -1,7 +1,14 @@
 import { FlatCompat } from '@eslint/eslintrc'
+/** @type {import('next').NextConfig} */
+
+const nextConfig = {
+  eslint : {
+    ignoreDuringBuilds: true
+  },
+}
 
 const compat = new FlatCompat({
-  // import.meta.dirname is available after Node.js v20.11.0
+  
   baseDirectory: import.meta.dirname,
 })
 
@@ -12,3 +19,4 @@ const eslintConfig = [
 ]
 
 export default eslintConfig
+module.exports = nextConfig

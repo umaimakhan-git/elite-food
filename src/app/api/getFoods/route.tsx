@@ -1,6 +1,6 @@
-import { NextResponse } from "next/server";
 import { client } from "@/sanity/lib/client";
 import { groq } from "next-sanity";
+import { NextResponse } from "next/server";
 
 export async function GET() {
   try {
@@ -17,9 +17,8 @@ export async function GET() {
     }`;
 
     const foods = await client.fetch(query);
-
     return NextResponse.json(foods);
-  } catch (error) {
+  } catch (_error) {  
     return NextResponse.json({ error: "Failed to fetch foods" }, { status: 500 });
   }
-};
+}
