@@ -18,7 +18,7 @@ const HomePageHero = () => {
 
         
         <div className="relative z-10 text-center text-white px-6 max-w-2xl">
-          <p className="text-yellow text-4xl md:text-4xl font-extrabold font-greatVibes">
+          <p className="text-yellow text-4xl md:text-4xl font-extrabold">
             Fresh, Fast & Delicious!
           </p>
           <h1 className="text-4xl md:text-4xl font-bold leading-tight font-helvetica mt-4">

@@ -26,7 +26,7 @@ export default {
       ifontFamily:{
         nter: ['Inter', 'sans-serif'],
         helvetica: ['Helvetica', 'sans-serif'],
-        greatVibes: ['Great Vibes', 'cursive'],
+  
       },
 
     },

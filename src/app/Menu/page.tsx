@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Food } from "@/types/food";
-import AddToCartButton from "../MenuDetails/AddToCartButton";
+import AddToCartButton from "@/app/MenuDetails/AddToCartButton";
 import { addToCart } from "../actions/actions";
 import { FaShoppingCart } from "react-icons/fa";
 
@@ -49,7 +49,7 @@ const MenuPage = () => {
             key={food._id}
             className="p-4 border rounded-lg shadow-md bg-white hover:shadow-lg transition duration-300"
           >
-            <Link href={`/MenuDetails/${food.slug.current}`} className="block">
+            <Link href={`/Menu/${food.slug.current}`} className="block">
               <Image
                 src={food.imageUrl}
                 alt={food.name}

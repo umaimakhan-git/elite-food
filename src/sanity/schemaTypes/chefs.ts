@@ -8,19 +8,7 @@ const chefsSchema =  {
       type: 'string',
       title: 'Chef Name',
     },
-    {
-      title: 'Slug',
-      name: 'slug',
-      type: 'slug',
-      options: {
-        source: 'name',
-        maxLength: 200, 
-        slugify: (input: string) => input
-                             .toLowerCase()
-                             .replace(/\s+/g, '-')
-                             .slice(0, 200)
-      }
-    },
+    
     {
       name: 'position',
       type: 'string',

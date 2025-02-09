@@ -21,7 +21,7 @@ export const allChefsQuery = defineQuery(`
     *[_type == "chef"]{
         _id,
         name,
-        "slug": slug.current,
+        
         position,
         experience,
         specialty,
