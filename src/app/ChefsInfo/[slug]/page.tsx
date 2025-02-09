@@ -4,12 +4,12 @@ import { groq } from 'next-sanity';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 
-// ✅ Type Fix for params
+
 interface ChefPageProps {
   params: { slug: string };
 }
 
-// ✅ SEO Metadata (Optional)
+
 export async function generateMetadata({ params }: ChefPageProps): Promise<Metadata> {
   return {
     title: `Chef - ${params.slug}`,
