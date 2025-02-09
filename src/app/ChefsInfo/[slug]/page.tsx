@@ -1,12 +1,22 @@
+import { Metadata } from 'next';
 import { client } from '@/sanity/lib/client';
 import { groq } from 'next-sanity';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 
+// ✅ Type Fix for params
 interface ChefPageProps {
-  params: Record<string, string>;
+  params: { slug: string };
 }
 
+// ✅ SEO Metadata (Optional)
+export async function generateMetadata({ params }: ChefPageProps): Promise<Metadata> {
+  return {
+    title: `Chef - ${params.slug}`,
+  };
+}
+
+// ✅ Fetch function
 async function getChef(slug: string) {
   return client.fetch(
     groq`*[_type == "chef" && slug.current == $slug][0]{
@@ -22,11 +32,11 @@ async function getChef(slug: string) {
   );
 }
 
+// ✅ Fixed Component
 export default async function ChefPage({ params }: ChefPageProps) {
-  if (!params?.slug) return notFound(); 
-  
-  const chef = await getChef(params.slug);
+  if (!params?.slug) return notFound();
 
+  const chef = await getChef(params.slug);
   if (!chef) return notFound();
 
   return (
