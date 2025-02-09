@@ -3,8 +3,8 @@ import { groq } from 'next-sanity';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 
-interface ChefProps {
-  params: { slug: string };
+interface ChefPageProps {
+  params: { slug: string }; 
 }
 
 async function getChef(slug: string) {
@@ -22,17 +22,20 @@ async function getChef(slug: string) {
   );
 }
 
-export default async function ChefPage({ params }: ChefProps) {
-  const { slug } = await params;
-  const chef = await getChef(slug);
+export default async function ChefPage({ params }: ChefPageProps) {
   
+  const { slug } = params;
 
+  const chef = await getChef(slug);
+
+  
   if (!chef) return notFound();
 
   return (
     <div className="max-w-6xl mx-auto px-6 py-12">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-        {/* Chef Image */}
+        
+        {/* ✅ Chef Image */}
         <div className="relative w-full h-[400px] rounded-lg overflow-hidden shadow-lg">
           <Image
             src={chef.imageUrl || '/placeholder.jpg'}
@@ -43,7 +46,7 @@ export default async function ChefPage({ params }: ChefProps) {
           />
         </div>
 
-     
+        {/* ✅ Chef Info */}
         <div className="flex flex-col justify-center space-y-4">
           <h1 className="text-3xl font-bold text-gray-900">{chef.name}</h1>
           <p className="text-lg text-gray-700">{chef.position}</p>
@@ -58,8 +61,6 @@ export default async function ChefPage({ params }: ChefProps) {
           </div>
 
           <p className="mt-4 text-gray-700">{chef.description}</p>
-
-          
         </div>
       </div>
     </div>
