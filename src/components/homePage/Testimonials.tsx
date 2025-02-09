@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 
-// ✅ Public Folder کی Images Direct Path کے ساتھ Use کریں
 const Testimonials = () => {
   return (
     <div className="w-full bg-black mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-10 items-start text-left py-10">
@@ -11,7 +10,7 @@ const Testimonials = () => {
       </div>
 
       <div className="relative bg-white shadow-lg rounded-xl p-4 sm:p-6 w-full max-w-[90%] sm:max-w-[600px] mx-auto flex flex-col items-center gap-4">
-        {/* ✅ Correct Image Usage */}
+       \
         <div className="absolute -top-10 sm:-top-12 w-20 sm:w-24 h-20 sm:h-24 overflow-hidden rounded-full border-4 border-white">
           <Image src="/assets/Hero8Face.png" alt="Client Face" width={96} height={96} className="object-cover" />
         </div>
@@ -26,11 +25,7 @@ const Testimonials = () => {
         </p>
 
         <div className="flex flex-col items-center gap-2">
-          <div className="flex gap-1">
-            {[...Array(5)].map((_, i) => (
-              <Image key={i} src="/icons/star.png" alt="Star" width={16} height={16} />
-            ))}
-          </div>
+          
           <p className="font-helvetica font-bold text-lg sm:text-xl text-primary">Alamin Hasan</p>
           <p className="text-xs sm:text-sm text-gray-500">Food Specialist</p>
         </div>

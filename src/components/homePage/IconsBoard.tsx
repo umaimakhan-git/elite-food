@@ -1,9 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
-const HeroIcon1 = "/assets/Icons/Hero5Icon1.png";
-const HeroIcon2 = "/assets/Icons/Icon2.png";
-const HeroIcon3 = "/assets/Icons/Hero5Icon3.png";
-const HeroIcon4 = "/assets/Icons/Hero5Icon3.png";
+const HeroIcon1 = "/Icons/Hero5Icon1.png";
+const HeroIcon2 = "/Icons/Icon2.png";
+const HeroIcon3 = "/Icons/Hero5Icon3.png";
+const HeroIcon4 = "/Icons/Hero5Icon3.png";
 
 
 const backGround = "/assets/Hero5Background.png";
@@ -20,7 +20,7 @@ const IconsBoard = () => {
           { icon: HeroIcon4, label: "Happy Customers", number: "220" },
         ].map((item, index) => (
           <div key={index} className='flex flex-col gap-4 items-center'>
-            <Image src={item.icon} alt={item.label} className="w-16 h-16" />
+            <Image src={item.icon} alt={item.label} width={200} height={200} className="w-16 h-16" />
             <p className='text-2xl font-bold text-white'>{item.label}</p>
             <p className='text-2xl font-bold  text-white'>{item.number}</p>
           </div>

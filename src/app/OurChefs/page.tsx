@@ -20,8 +20,8 @@ async function OurChefs() {
                         <Image
                             src={chef.imageUrl}
                             alt={chef.name}
-                            width={200}
-                            height={200}
+                           width={200}
+                           height={200}
                             layout="intrinsic"
                             className='w-60 h-60 object-contain rounded-md'
                         />

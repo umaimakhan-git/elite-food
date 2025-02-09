@@ -37,14 +37,14 @@ const HeroSection2 = () => {
         
         <div className="lg:w-1/2 w-full flex flex-col gap-6">
           <div className="overflow-hidden rounded-xl shadow-lg">
-            <Image src={card1} alt="Culinary Art" className="w-full object-cover rounded-xl" />
+            <Image src={card1}  alt="Culinary Art" className="w-full object-cover rounded-xl" />
           </div>
           <div className="flex gap-6 flex-col lg:flex-row">
             <div className="overflow-hidden rounded-xl shadow-lg w-full">
-              <Image src={card2} alt="Exquisite Dishes" className="w-full object-cover rounded-xl" />
+              <Image src={card2}   alt="Exquisite Dishes" className="w-full object-cover rounded-xl" />
             </div>
             <div className="overflow-hidden rounded-xl shadow-lg w-full">
-              <Image src={card3} alt="Fine Dining" className="w-full object-cover rounded-xl" />
+              <Image src={card3}  alt="Fine Dining" className="w-full object-cover rounded-xl" />
             </div>
           </div>
         </div>

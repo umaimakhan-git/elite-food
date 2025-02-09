@@ -73,7 +73,7 @@ const BlogDetails = () => {
       
       {blog && (
         <div>
-          <Image src={blog.image} alt={blog.title} className="w-full h-64 object-cover rounded-lg shadow-lg" />
+          <Image src={blog.image} alt={blog.title}  className="w-full h-64 object-cover rounded-lg shadow-lg" />
           <h1 className="text-3xl font-bold mt-4">{blog.title}</h1>
           <p className="text-gray-600 mt-2">{blog.content}</p>
         </div>

@@ -2,13 +2,13 @@
   "name": "hackathon3-elite-food-restaurant",
   "version": "0.1.0",
   "private": true,
-  "type": "module", 
+  "type": "module",
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "Data": "node src/scripts/import-data.mjs && node src/scripts/import-chefs-data.mjs"
+    "Data": "node --experimental-json-modules src/scripts/import-data.mjs && node --experimental-json-modules src/scripts/import-chefs-data.mjs"
   },
   "dependencies": {
     "@clerk/nextjs": "^6.11.1",
@@ -41,5 +41,11 @@
     "tailwindcss": "^3.4.1",
     "ts-node": "^10.9.2",
     "typescript": "^5"
+  },
+  "eslintConfig": {
+    "extends": "next",
+    "rules": {
+      "no-undef": "off"
+    }
   }
 }

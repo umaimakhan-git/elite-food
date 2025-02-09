@@ -1,5 +1,8 @@
 import { FlatCompat } from '@eslint/eslintrc'
 /** @type {import('next').NextConfig} */
+import { URL } from 'url'
+
+const __dirname = decodeURI(new URL('.', import.meta.dirname).pathname)
 
 const nextConfig = {
   eslint : {

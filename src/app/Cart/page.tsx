@@ -74,7 +74,7 @@ const CartPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {cart.map(item => (
               <div key={item._id} className="p-4 border rounded-lg shadow-md flex flex-col items-center">
-                <Image src={item.imageUrl} alt={item.name} className="w-32 h-32 object-cover rounded-md mb-2" />
+                <Image src={item.imageUrl} width={200} height={200} alt={item.name} className="w-32 h-32 object-cover rounded-md mb-2" />
                 <h3 className="text-lg font-semibold">{item.name}</h3>
                 <p className="text-md font-semibold">${item.price}</p>
 
